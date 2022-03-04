@@ -59,7 +59,55 @@ class monday extends StatelessWidget {
                   ),
                 ]),
                 SizedBox(
-                  height: 20,
+                  height: 40,
+                ),
+                Stack(alignment: Alignment.center, children: <Widget>[
+                  Image.asset('assets/images/brunch.jpg',
+                      color: const Color.fromRGBO(255, 255, 255, 0.3),
+                      colorBlendMode: BlendMode.modulate),
+                  Text(
+                    "someText",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ]),
+                SizedBox(
+                  height: 40,
+                ),
+                Stack(alignment: Alignment.center, children: <Widget>[
+                  Image.asset('assets/images/lunch.jpg',
+                      color: const Color.fromRGBO(255, 255, 255, 0.3),
+                      colorBlendMode: BlendMode.modulate),
+                  Text(
+                    "someText",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ]),
+                SizedBox(
+                  height: 40,
+                ),
+                Stack(alignment: Alignment.center, children: <Widget>[
+                  Image.asset('assets/images/snack.jpg',
+                      color: const Color.fromRGBO(255, 255, 255, 0.3),
+                      colorBlendMode: BlendMode.modulate),
+                  Text(
+                    "someText",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ]),
+                SizedBox(
+                  height: 40,
+                ),
+                Stack(alignment: Alignment.center, children: <Widget>[
+                  Image.asset('assets/images/dinner.jpg',
+                      color: const Color.fromRGBO(255, 255, 255, 0.3),
+                      colorBlendMode: BlendMode.modulate),
+                  Text(
+                    "someText",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ]),
+                SizedBox(
+                  height: 40,
                 ),
               ],
             ),

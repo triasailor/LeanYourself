@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lean_yourself_app/guidelines.dart';
 import 'package:lean_yourself_app/monday.dart';
+import 'package:lean_yourself_app/startscreen.dart';
 import 'recipes.dart';
 import 'about.dart';
 
@@ -182,7 +183,10 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: null,
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => startscreen()));
+              },
               child: Center(
                 child: const Text(
                   'Log Out',
