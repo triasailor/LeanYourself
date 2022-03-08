@@ -54,7 +54,7 @@ class sunday extends StatelessWidget {
                       color: const Color.fromRGBO(255, 255, 255, 0.3),
                       colorBlendMode: BlendMode.modulate),
                   Text(
-                    "someText",
+                    "• Oat 80gr                                       •Coconut Milk 250 ml                              • Raw Almonds 30gr",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ]),
@@ -66,7 +66,7 @@ class sunday extends StatelessWidget {
                       color: const Color.fromRGBO(255, 255, 255, 0.3),
                       colorBlendMode: BlendMode.modulate),
                   Text(
-                    "someText",
+                    "• Hard-boiled Eggs 2pcs                                      •Fetta Cheese 10gr                                   • Tomato 1pc",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ]),
@@ -78,7 +78,7 @@ class sunday extends StatelessWidget {
                       color: const Color.fromRGBO(255, 255, 255, 0.3),
                       colorBlendMode: BlendMode.modulate),
                   Text(
-                    "someText",
+                    "• Chicken Breast 360 gr                                     •Basmatti Rice 80gr                                   • Cabbage Salad",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ]),
@@ -90,7 +90,7 @@ class sunday extends StatelessWidget {
                       color: const Color.fromRGBO(255, 255, 255, 0.3),
                       colorBlendMode: BlendMode.modulate),
                   Text(
-                    "someText",
+                    "• Green Apple 1pc                                     • Raw Walnuts 5 pcs",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ]),
@@ -102,7 +102,7 @@ class sunday extends StatelessWidget {
                       color: const Color.fromRGBO(255, 255, 255, 0.3),
                       colorBlendMode: BlendMode.modulate),
                   Text(
-                    "someText",
+                    "• Greek Yogurt 2% fat 200gr",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ]),
@@ -112,7 +112,7 @@ class sunday extends StatelessWidget {
               ],
             ),
             color: Colors.pink[100],
-            padding: EdgeInsets.fromLTRB(130.0, 20.0, 130.0, 40.0),
+            padding: EdgeInsets.fromLTRB(100.0, 20.0, 100.0, 40.0),
           ),
         ));
   }

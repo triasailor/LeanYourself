@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lean_yourself_app/signup_form.dart';
 import 'main.dart';
 import 'startscreen.dart';
+import 'login_form.dart';
 
 class login_signup extends StatelessWidget {
   const login_signup({Key? key}) : super(key: key);
@@ -17,17 +19,20 @@ class login_signup extends StatelessWidget {
             ),
             Image.asset('assets/images/logo.jpg'),
             SizedBox(
-              height: 50,
+              height: 90,
             ),
             Text(
               'Proceed to SIGN UP to create a new account and start losing pounds! :',
               style: TextStyle(fontSize: 16),
             ),
             SizedBox(
-              height: 40,
+              height: 20,
             ),
             ElevatedButton(
-              onPressed: null,
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => signup_form()));
+              },
               child: Center(
                 child: const Text(
                   'SIGN UP',
@@ -38,22 +43,29 @@ class login_signup extends StatelessWidget {
                   onPrimary: Colors.white,
                   //onSurface: Colors.white,
                   shadowColor: Colors.green[700],
-                  primary: Colors.white,
+                  primary: Colors.green[700],
                   elevation: 15.0,
                   padding: EdgeInsets.all(19.0)
                   //shape:
                   ),
             ),
             SizedBox(
-              height: 40,
+              height: 20,
+            ),
+            Image.asset('assets/images/logo2.jpg'),
+            SizedBox(
+              height: 20,
             ),
             Text('if you already have an account please LOG IN :',
                 style: TextStyle(fontSize: 16)),
             SizedBox(
-              height: 40,
+              height: 20,
             ),
             ElevatedButton(
-              onPressed: null,
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => login_form()));
+              },
               child: Center(
                 child: const Text(
                   'LOG IN',
@@ -64,7 +76,7 @@ class login_signup extends StatelessWidget {
                   onPrimary: Colors.white,
                   //onSurface: Colors.white,
                   shadowColor: Colors.green[700],
-                  primary: Colors.white,
+                  primary: Colors.green[700],
                   elevation: 15.0,
                   padding: EdgeInsets.all(19.0)
                   //shape:
@@ -74,7 +86,7 @@ class login_signup extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
         ),
         color: Colors.pink[100],
-        padding: EdgeInsets.fromLTRB(130.0, 20.0, 130.0, 40.0),
+        padding: EdgeInsets.fromLTRB(70.0, 20.0, 70.0, 40.0),
       ),
     );
   }

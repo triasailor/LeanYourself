@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lean_yourself_app/biometrics.dart';
+import 'package:lean_yourself_app/login_form.dart';
 import 'main.dart';
-import 'login_form.dart';
-import 'signup_form.dart';
+import 'login_signup.dart';
 
 class MyCustomForm extends StatefulWidget {
   const MyCustomForm({Key? key}) : super(key: key);
@@ -12,9 +13,6 @@ class MyCustomForm extends StatefulWidget {
   }
 }
 
-enum sex { Female, Male }
-enum preferences { Vegeterian, Omnivore }
-
 // Define a corresponding State class.
 // This class holds data related to the form.
 class MyCustomFormState extends State<MyCustomForm> {
@@ -24,8 +22,6 @@ class MyCustomFormState extends State<MyCustomForm> {
   // Note: This is a `GlobalKey<FormState>`,
   // not a GlobalKey<MyCustomFormState>.
   final _formKey = GlobalKey<FormState>();
-  sex? choice = sex.Female;
-  preferences? pref = preferences.Omnivore;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +39,7 @@ class MyCustomFormState extends State<MyCustomForm> {
               return null;
             },
             decoration: InputDecoration(
-              labelText: 'AGE*',
+              labelText: 'NAME*',
               labelStyle: TextStyle(
                 color: Colors.deepPurple[400],
               ),
@@ -53,25 +49,25 @@ class MyCustomFormState extends State<MyCustomForm> {
             alignment: Alignment.centerLeft,
             child: Container(
               child: Text(
-                "15 - 80",
+                "How you would like us to call you.",
                 textAlign: TextAlign.left,
                 style: TextStyle(color: Colors.deepPurple[400], fontSize: 10),
               ),
             ),
           ),
           SizedBox(
-            height: 30,
+            height: 20,
           ),
           TextFormField(
             // The validator receives the text that the user has entered.
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter a valid age 15 - 80';
+                return 'Please enter some text';
               }
               return null;
             },
             decoration: InputDecoration(
-              labelText: 'WEIGHT*',
+              labelText: 'USERNAME*',
               labelStyle: TextStyle(
                 color: Colors.deepPurple[400],
               ),
@@ -81,25 +77,25 @@ class MyCustomFormState extends State<MyCustomForm> {
             alignment: Alignment.centerLeft,
             child: Container(
               child: Text(
-                "in Kg",
+                "You will use this along with the password to enter the app",
                 textAlign: TextAlign.left,
                 style: TextStyle(color: Colors.deepPurple[400], fontSize: 10),
               ),
             ),
           ),
           SizedBox(
-            height: 30,
+            height: 20,
           ),
           TextFormField(
             // The validator receives the text that the user has entered.
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your weight';
+                return 'Please enter some text';
               }
               return null;
             },
             decoration: InputDecoration(
-                labelText: 'HEIGHT*',
+                labelText: 'PASSWORD*',
                 labelStyle: TextStyle(
                   color: Colors.deepPurple[400],
                 )),
@@ -108,102 +104,24 @@ class MyCustomFormState extends State<MyCustomForm> {
             alignment: Alignment.centerLeft,
             child: Container(
               child: Text(
-                "in cm",
+                "Should be longer than 5 characters and contain at least one of each : A-Z, a-z, 0-9, !#@%&*",
                 textAlign: TextAlign.left,
                 style: TextStyle(color: Colors.deepPurple[400], fontSize: 10),
               ),
             ),
           ),
           SizedBox(
-            height: 30,
-          ),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Container(
-              child: Text(
-                "SEX",
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  color: Colors.deepPurple[400],
-                ),
-              ),
-            ),
-          ),
-          ListTile(
-            title: const Text('Female'),
-            leading: Radio<sex>(
-              value: sex.Female,
-              groupValue: choice,
-              onChanged: (sex? value) {
-                setState(() {
-                  choice = value;
-                });
-              },
-            ),
-          ),
-          ListTile(
-            title: const Text('Male'),
-            leading: Radio<sex>(
-              value: sex.Male,
-              groupValue: choice,
-              onChanged: (sex? value) {
-                setState(() {
-                  choice = value;
-                });
-              },
-            ),
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Container(
-              child: Text(
-                "DIET PREFERENCES",
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  color: Colors.deepPurple[400],
-                ),
-              ),
-            ),
-          ),
-          ListTile(
-            title: const Text('Vegeterian'),
-            leading: Radio<preferences>(
-              value: preferences.Vegeterian,
-              groupValue: pref,
-              onChanged: (preferences? value) {
-                setState(() {
-                  pref = value;
-                });
-              },
-            ),
-          ),
-          ListTile(
-            title: const Text('Omnivore'),
-            leading: Radio<preferences>(
-              value: preferences.Omnivore,
-              groupValue: pref,
-              onChanged: (preferences? value) {
-                setState(() {
-                  pref = value;
-                });
-              },
-            ),
-          ),
-          SizedBox(
-            height: 30,
+            height: 20,
           ),
           ElevatedButton(
             onPressed: () {
               if (_formKey.currentState!.validate())
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => login_form()));
+                    MaterialPageRoute(builder: (context) => biometrics()));
             },
             child: Center(
               child: const Text(
-                'SUBMIT',
+                'SIGN UP',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
             ),
@@ -224,36 +142,33 @@ class MyCustomFormState extends State<MyCustomForm> {
   }
 }
 
-class biometrics extends StatelessWidget {
-  const biometrics({Key? key}) : super(key: key);
+class signup_form extends StatelessWidget {
+  const signup_form({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView(
-      children: [
-        Container(
-          child: Column(
-            children: [
-              SizedBox(
-                height: 20,
-              ),
-              Image.asset('assets/images/logo.jpg'),
-              SizedBox(
-                height: 40,
-              ),
-              MyCustomForm(),
-              SizedBox(
-                height: 40,
-              ),
-            ],
-            mainAxisSize: MainAxisSize.max,
-          ),
-          color: Colors.pink[100],
-          padding: EdgeInsets.fromLTRB(70.0, 20.0, 70.0, 40.0),
-        )
-      ],
-    ));
+      body: Container(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 20,
+            ),
+            Image.asset('assets/images/logo.jpg'),
+            SizedBox(
+              height: 80,
+            ),
+            MyCustomForm(),
+            SizedBox(
+              height: 40,
+            ),
+          ],
+          mainAxisSize: MainAxisSize.max,
+        ),
+        color: Colors.pink[100],
+        padding: EdgeInsets.fromLTRB(70.0, 20.0, 70.0, 40.0),
+      ),
+    );
   }
 }

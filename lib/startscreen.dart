@@ -17,7 +17,7 @@ class startscreen extends StatelessWidget {
             ),
             Image.asset('assets/images/logo.jpg'),
             SizedBox(
-              height: 20,
+              height: 80,
             ),
             Text(
               'Start eating delicious, nutritious and healthy meals customized to yourself!',
@@ -60,7 +60,7 @@ class startscreen extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
         ),
         color: Colors.pink[100],
-        padding: EdgeInsets.fromLTRB(130.0, 20.0, 130.0, 40.0),
+        padding: EdgeInsets.fromLTRB(70.0, 20.0, 70.0, 40.0),
       ),
     );
   }
