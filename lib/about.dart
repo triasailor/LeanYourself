@@ -43,6 +43,11 @@ class About extends StatelessWidget {
             height: 20,
           ),
           Text("Triantafyllos Papoutsis - Phd Wellness and Fitness NTUA"),
+          Image.asset(
+            "assets/images/trias.jpg",
+            width: 200,
+            height: 200,
+          ),
           SizedBox(
             height: 20,
           ),
@@ -50,7 +55,16 @@ class About extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
+          Image.asset("assets/images/odusseas.jpeg",
+              width: 400, height: 200, fit: BoxFit.fitWidth),
+          SizedBox(
+            height: 20,
+          ),
           Text("Maria Tsigara - Phd Kinesiology and Homeopathy Sciences NTUA"),
+          SizedBox(
+            height: 20,
+          ),
+          Image.asset("assets/images/maria.jpeg", width: 200, height: 200),
           SizedBox(
             height: 20,
           ),
@@ -66,7 +80,7 @@ class About extends StatelessWidget {
           ),
         ]),
         color: Colors.pink[100],
-        padding: EdgeInsets.fromLTRB(130.0, 20.0, 130.0, 40.0),
+        padding: EdgeInsets.fromLTRB(70.0, 20.0, 70.0, 40.0),
       ),
     );
   }

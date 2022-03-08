@@ -105,7 +105,7 @@ class brunch2 extends StatelessWidget {
               ],
             ),
             color: Colors.pink[100],
-            padding: EdgeInsets.fromLTRB(130.0, 20.0, 130.0, 40.0),
+            padding: EdgeInsets.fromLTRB(70.0, 20.0, 70.0, 40.0),
           ),
         ));
   }

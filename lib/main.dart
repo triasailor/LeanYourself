@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lean_yourself_app/guidelines.dart';
 import 'package:lean_yourself_app/monday.dart';
+import 'package:lean_yourself_app/startscreen.dart';
 import 'recipes.dart';
 import 'about.dart';
 
@@ -139,26 +140,6 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: null,
-              child: Center(
-                child: const Text(
-                  'Biometrics',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                ),
-              ),
-              style: ElevatedButton.styleFrom(
-                onPrimary: Colors.black,
-                //onSurface: Colors.white,
-                shadowColor: Colors.white,
-                primary: Colors.white,
-                elevation: 15.0,
-                //shape:
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            ElevatedButton(
               onPressed: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => About()));
@@ -182,7 +163,10 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: null,
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => startscreen()));
+              },
               child: Center(
                 child: const Text(
                   'Log Out',
@@ -202,7 +186,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisSize: MainAxisSize.max,
         ),
         color: Colors.pink[100],
-        padding: EdgeInsets.fromLTRB(130.0, 20.0, 130.0, 40.0),
+        padding: EdgeInsets.fromLTRB(100.0, 20.0, 100.0, 40.0),
       ),
     );
   }

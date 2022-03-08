@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
 import 'monday.dart';
+import 'wednesday.dart';
 
 class tuesday extends StatelessWidget {
   const tuesday({Key? key}) : super(key: key);
@@ -30,7 +31,12 @@ class tuesday extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => tuesday())); //Left Swipe
+                      builder: (context) => wednesday())); //Left Swipe
+            } else if (details.delta.dx > sensitivity) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => monday())); //Right Swipe
             }
           },
           child: Container(
@@ -41,7 +47,7 @@ class tuesday extends StatelessWidget {
                 ),
                 Center(
                   child: Container(
-                    child: Text("MONDAY"),
+                    child: Text("TUESDAY"),
                     padding: EdgeInsets.all(8.0),
                     color: Colors.orange[400],
                   ),
@@ -49,76 +55,70 @@ class tuesday extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                Text(
-                  "Zesty Salmon With Roasted Beets & Spinach",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                Text("(2 Servings)"),
+                Stack(alignment: Alignment.center, children: <Widget>[
+                  Image.asset('assets/images/breakfast.jpg',
+                      color: const Color.fromRGBO(255, 255, 255, 0.3),
+                      colorBlendMode: BlendMode.modulate),
+                  Text(
+                    "• Oat 80gr                                       •Almond Milk 250 ml                              • Raisins 30gr",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ]),
                 SizedBox(
-                  height: 20,
+                  height: 40,
                 ),
-                Text("Per Serving : "),
-                Text("Kcal 543"),
-                Text("Fat 32g"),
-                Text("Saturates 5g"),
-                Text("Carbs 27g"),
-                Text("Sugars 22g"),
-                Text("Fibre 10g"),
-                Text("Protein 33g"),
-                Text("Salt 0.6g"),
+                Stack(alignment: Alignment.center, children: <Widget>[
+                  Image.asset('assets/images/brunch.jpg',
+                      color: const Color.fromRGBO(255, 255, 255, 0.3),
+                      colorBlendMode: BlendMode.modulate),
+                  Text(
+                    "• Hard-boiled Eggs 2pcs                                      •Fetta Cheese 10gr                                   • Tomato 1pc",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ]),
                 SizedBox(
-                  height: 20,
+                  height: 40,
                 ),
-                Text(
-                  "Ingredients",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
+                Stack(alignment: Alignment.center, children: <Widget>[
+                  Image.asset('assets/images/lunch.jpg',
+                      color: const Color.fromRGBO(255, 255, 255, 0.3),
+                      colorBlendMode: BlendMode.modulate),
+                  Text(
+                    "• Chicken Breast 360 gr                                     •Basmatti Rice 80gr                                   • Cabbage Salad",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ]),
                 SizedBox(
-                  height: 20,
+                  height: 40,
                 ),
-                Text(
-                    "4 small fresh beetroots , about 200g, 1 ½ tbsp rapeseed oil, 1 tsp coriander seeds lightly crushed, 2 skinless salmon or trout fillets, 2 ½ small oranges , zest of 1 and juice of half, 3 tbsp pumpkin seeds, 1 garlic clove, 1 red onion , finely chopped, 4 handfuls baby spinach leaves, 1 avocado , thickly sliced"),
+                Stack(alignment: Alignment.center, children: <Widget>[
+                  Image.asset('assets/images/snack.jpg',
+                      color: const Color.fromRGBO(255, 255, 255, 0.3),
+                      colorBlendMode: BlendMode.modulate),
+                  Text(
+                    "• Green Apple 1pc                                     • Raw Walnuts 5 pcs",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ]),
                 SizedBox(
-                  height: 20,
+                  height: 40,
                 ),
-                Text(
-                  "Method",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
+                Stack(alignment: Alignment.center, children: <Widget>[
+                  Image.asset('assets/images/dinner.jpg',
+                      color: const Color.fromRGBO(255, 255, 255, 0.3),
+                      colorBlendMode: BlendMode.modulate),
+                  Text(
+                    "• Greek Yogurt 2% fat 200gr",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ]),
                 SizedBox(
-                  height: 20,
-                ),
-                Text("STEP 1"),
-                SizedBox(
-                  height: 20,
-                ),
-                Text(
-                    "Heat oven to 180C, 160C fan, gas 4. Trim the stems of the beetroot and reserve any tender leaves that are suitable for eating in the salad. Cut the beetroots into quarters then toss with 1/2 tbsp oil, the coriander seeds, and some seasoning then pile into the centre of a large sheet of foil and wrap up like a parcel. Bake for 45 mins or until the beetroots are tender then top with the salmon, scatter over half the orange zest and return to the oven for 15 mins. If you want to toast the pumpkin seeds, put them in the oven for 10 mins."),
-                SizedBox(
-                  height: 20,
-                ),
-                Text("STEP 2"),
-                SizedBox(
-                  height: 20,
-                ),
-                Text(
-                    "Meanwhile cut the peel and pith from 2 oranges then cut out the segments with a sharp knife working over a bowl to catch the juices. Finely grate the garlic and leave for 10 mins to allow the enzymes to activate. Stir the garlic into the orange juice and remaining oil with seasoning to make a dressing."),
-                SizedBox(
-                  height: 20,
-                ),
-                Text("STEP 3"),
-                SizedBox(
-                  height: 20,
-                ),
-                Text(
-                    "Remove the parcel from the oven and carefully lift off the fish. Tip the beetroot into a bowl with the red onion, remaining orange zest, pumpkin seeds and spinach leaves and toss well. Gently toss through the orange segments and avocado with any beet leaves then pile onto plates and top with the warm salmon. Drizzle over the dressing and serve while still warm."),
-                SizedBox(
-                  height: 20,
+                  height: 40,
                 ),
               ],
             ),
             color: Colors.pink[100],
-            padding: EdgeInsets.fromLTRB(130.0, 20.0, 130.0, 40.0),
+            padding: EdgeInsets.fromLTRB(100.0, 20.0, 100.0, 40.0),
           ),
         ));
   }
